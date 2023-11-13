@@ -1,18 +1,18 @@
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener('DOMContentLoaded', () => {
   const main = () => {
-    const heightCalculate = () => {
-      const navigation = document.querySelector('.navigation__inner');
-      const imgFluidWrapper = document.querySelector('.img-fluid-wrapper');
-
-      const height = +imgFluidWrapper.offsetHeight + +getComputedStyle(imgFluidWrapper).marginBottom.slice(0, -2);
-
-      navigation.style.minHeight = `calc(100vh - ${height}px)`
+    const wowCheck = () => {
+      if (window.innerWidth <= 700) {
+        const elements = document.querySelectorAll('[data-wow-delay]');
+        elements.forEach(el => {
+          el.removeAttribute('data-wow-delay')
+        })
+      }
     }
 
-    heightCalculate();
-    window.addEventListener('resize', heightCalculate)
-
+    window.addEventListener('resize', wowCheck)
+    wowCheck()
+    new WOW().init();
   }
 
-  main();
+  main()
 })
