@@ -933,9 +933,29 @@ html {
     margin-bottom: calc(20px + 10 * ((100vw - 320px) / 880));
   }
 }
+.base__title--centered {
+  text-align: center;
+}
 .base__list {
   list-style-type: disc;
   padding-left: 20px;
+}
+.base__list--centered {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 50%;
+          flex: 1 1 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  list-style-type: none;
 }
 .base__item + .base__item {
   margin-top: 5px;
@@ -988,6 +1008,49 @@ html {
 .base__lapki {
   max-width: 400px;
   margin: 0 auto;
+}
+.base__lists {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 auto;
+  margin: 0 -150px;
+  margin-bottom: 40px;
+}
+@media (max-width: 1200px) {
+  .base__lists {
+    margin-bottom: calc(20px + 20 * ((100vw - 320px) / 880));
+  }
+}
+.base__lists .base__list {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 50%;
+          flex: 1 1 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  list-style-type: none;
+}
+.base__list-wrapper + .base__list-wrapper {
+  margin-left: 50px;
+}
+.base__subtitle {
+  font-size: 24px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+@media (max-width: 1200px) {
+  .base__subtitle {
+    font-size: calc(20px + 4 * ((100vw - 320px) / 880));
+  }
 }
 
 /* SCROLLBAR + SELECTION */
@@ -1082,6 +1145,27 @@ html {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+  }
+}
+@media (max-width: 890px) {
+  .base__list-wrapper + .base__list-wrapper {
+    margin-left: 0;
+    margin-top: 40px;
+  }
+}
+@media (max-width: 890px) and (max-width: 1200px) {
+  .base__list-wrapper + .base__list-wrapper {
+    margin-top: calc(20px + 20 * ((100vw - 320px) / 880));
+  }
+}
+@media (max-width: 890px) {
+  .base__lists {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-left: 0;
+    margin-right: 0;
   }
 }
 @media (max-width: 750px) {
