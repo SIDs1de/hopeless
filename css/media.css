@@ -1,0 +1,39 @@
+@media (min-width: 998px) {
+	.link {
+		transition: 0.2s;
+	}
+	.link:hover {
+		box-shadow: 1px 1px 7px rgba(0, 0, 0, 0.6);
+	}
+	.link-item {
+		transition: 0.2s;
+	}
+	.link-item:active {
+		transition: 0s;
+		transform: scale(0.95);
+	}
+}
+
+@media (max-width: 1199px) {
+	:root {
+		font-size: 14px;
+	}
+}
+
+@media (max-width: 991px) {
+	:root {
+		font-size: 12px;
+	}
+}
+
+@media (max-width: 767px) {
+	:root {
+		font-size: 11px;
+	}
+}
+
+@media (max-width: 575px) {
+	:root {
+		font-size: 10px;
+	}
+}
